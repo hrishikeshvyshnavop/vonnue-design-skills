@@ -18,7 +18,7 @@ export const meta = {
 const A = typeof args === 'string' ? { image: args } : (args || {})
 if (!A.image) throw new Error('args.image (screenshot path) is required')
 
-const PROJECT = A.project || 'E:/workflows/claude-refero-web'
+const PROJECT = A.project || 'C:/Users/Vonnue/.claude/skills/screenspec'  // outputs land in the repo clone (junction)
 const SKILL = A.skillDir || 'C:/Users/Vonnue/.claude/skills/screenspec'
 const SCRATCH = A.scratchpad || 'C:/Users/Vonnue/AppData/Local/Temp/screenspec'
 const FILE_KEY = A.figmaFileKey

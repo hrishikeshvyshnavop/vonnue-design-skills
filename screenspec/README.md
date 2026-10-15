@@ -48,7 +48,7 @@ Workflow args (`workflows/screenspec.js`):
 | `refero` | `true`: pulls 2–3 similar Refero screens to match tags and wording |
 | `output` | required, no default: `figma`, `html` or `spec`. Claude asks you before launching |
 | `figmaFileKey` / `figmaNodeId` | required for `figma`; asked each run (suggests `D2YSLONP8r5J69GiH8YBwK`, Playground page) |
-| `project` / `scratchpad` | this repo / a temp folder |
+| `project` / `scratchpad` | the installed skill folder (so outputs land in `screenspecs/` here) / a temp folder |
 
 | You want | Say |
 |---|---|
