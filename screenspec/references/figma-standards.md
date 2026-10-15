@@ -45,14 +45,14 @@ Name pattern: `<type>/<group>/<role>` — lowercase, kebab-case words, slashes f
 - Collections: `<Project> / Color` (one mode) and `<Project> / Layout` (breakpoint modes). Never edit or rename collections that were already in the file.
 
 ### Text styles
-Name pattern: `<Project>/<Role>` — e.g. `Watts/Tagline`, `Watts/Overline`, `Watts/Link`, `Watts/Caption`, `Watts/Button`, `Watts/Input`. Other roles in use: `Title`, `Description`, `Badge`, `Stat Value`, `Stat Label`, `Wordmark`, `Acknowledgement`.
+Name pattern: `<Project>/<Role>` — e.g. `Watts/Tagline`, `Watts/Overline`, `Watts/Link`, `Watts/Caption`, `Watts/Button`, `Watts/Input`. Other roles in use: `Title`, `Description`, `Badge`, `Stat value`, `Stat label`, `Wordmark`, `Acknowledgement`.
 When text styles are in use, every text layer uses one; no loose font settings.
 
 ## 4. Layer naming
 
 ### Casing
-- **Frames and layers:** Title Case words with spaces — `Email Field`, `Link List`.
-- **Components and icons:** slash paths in Title Case — `Footer`, `Icon/Instagram`, `Logo/Watts`.
+- **Frames and layers:** Sentence case: first word capitalized, the rest lowercase, words separated by spaces. `Email field`, `Link list`, `Stats row`. Proper names keep their capitals (`Logo/Watts`, `Icon/TikTok`). Same rule as the `figma-structure-refiner` skill, so either skill can run on the other's output without renaming.
+- **Components and icons:** slash paths, each segment in Sentence case — `Footer`, `Icon/Instagram`, `Social link/Instagram`, `Logo/Watts`.
 - **Variant properties:** `Property=Value` — `Breakpoint=Mobile`.
 
 ### Name by role, not content or look
@@ -60,7 +60,7 @@ When text styles are in use, every text layer uses one; no loose font settings.
 |---|---|
 | `Frame 12`, `Group 3` | what it is: `Columns`, `Newsletter` |
 | `Fueling happier, healthier dogs…` (auto text name) | `Tagline` |
-| `Orange Box`, `Big Text` | `Panel`, `Heading` |
+| `Orange box`, `Big text` | `Panel`, `Heading` |
 | `Rectangle 4` behind a button | the button's fill, no extra layer |
 | `Vector`, `Union` | `Icon/TikTok`, `Logo/Watts` |
 
@@ -71,13 +71,13 @@ When text styles are in use, every text layer uses one; no loose font settings.
 | Main coloured surface | `Panel` |
 | Row of columns | `Columns` |
 | A column | its job: `Brand`, `Navigation`, `Support`, `Newsletter`, `Contact`, `Address` |
-| Vertical list of links | `Link List` → items `Link` |
+| Vertical list of links | `Link list` → items `Link` |
 | Column title | `Heading` (small caps label: still `Heading`) |
 | Main statement | `Tagline` / `Title`; supporting text `Description`; fine print `Caption` |
-| Text input | `<Purpose> Field` → children `Placeholder` / `Value`, `Button` |
+| Text input | `<Purpose> field` → children `Placeholder` / `Value`, `Button` |
 | Button | `Button` → child `Label`, optional `Icon/<Name>` |
-| Icon-only link | `Social Link/<Network>` → child `Icon/<Network>` |
-| Row of items | `<Item> Row` — `Social Row`, `Wordmark Row` |
+| Icon-only link | `Social link/<Network>` → child `Icon/<Network>` |
+| Row of items | `<Item> row` — `Social row`, `Wordmark row` |
 | Grouping of a heading + its content | the purpose: `Signup`, `Follow` |
 | Logo or wordmark | `Logo/<Brand>` |
 | All content in a panel, apart from decoration | `Content` |
@@ -85,26 +85,26 @@ When text styles are in use, every text layer uses one; no loose font settings.
 | Text that introduces a section (headline + description) | `Intro` |
 | Small badge above a title, grouped with the title | `Headline` → `Badge`, `Title` |
 | Small pill label above a title | `Badge` → child `Label` |
-| One metric | `Stat` → children `Value`, `Label`; several sit in a `Stats Row` |
+| One metric | `Stat` → children `Value`, `Label`; several sit in a `Stats row` |
 | Decorative graphic placed absolutely | `<Name> [abs]`: `Globe [abs]` |
 | Layers of a dot or halftone graphic, by strength | `Dots/<Strength>`: `Dots/Faint`, `Dots/Soft`, `Dots/Medium`, `Dots/Bright` |
 | The vector inside an icon frame | its shape: `Chevron`, `Arrow`, `Pin` |
-| Brand name set as live text (not an SVG logo) | `Wordmark`; one layer per word when the words are split apart, inside a `Wordmark Row` |
+| Brand name set as live text (not an SVG logo) | `Wordmark`; one layer per word when the words are split apart, inside a `Wordmark row` |
 | Lower block of a footer below a rule (statement, columns, bottom row) | `Details` |
 | Acknowledgement of Country or similar statement | `Acknowledgement` → child `Description` |
-| Postal address lines | `Address` → items `Address Line` (not links; plain `Line` is a default Figma name and fails the audit) |
-| Last row: copyright and logo | `Bottom Row` → `Caption`, `Logo/<Brand>` |
-| Data table | `Table` → `Header Row`, then one `Feature Group` per category (plain `Group` is a default Figma name and fails the audit) |
-| Table header with one cell per plan or column | `Header Row` → `Label Cell` (empty corner), `Plan` → `Name`, `Price` |
-| Category block inside a table | `Feature Group` → `Group Heading` (child `Heading`), then `Feature Row`s |
-| One table row | `Feature Row` → `Label Cell`, `Value Cell` ×N |
-| Table cell with a value | `Value Cell` → `Value`, optional `Note` (second line), or `Icon/Check` |
+| Postal address lines | `Address` → items `Address line` (not links; plain `Line` is a default Figma name and fails the audit) |
+| Last row: copyright and logo | `Bottom row` → `Caption`, `Logo/<Brand>` |
+| Data table | `Table` → `Header row`, then one `Feature group` per category (plain `Group` is a default Figma name and fails the audit) |
+| Table header with one cell per plan or column | `Header row` → `Label cell` (empty corner), `Plan` → `Name`, `Price` |
+| Category block inside a table | `Feature group` → `Group heading` (child `Heading`), then `Feature row`s |
+| One table row | `Feature row` → `Label cell`, `Value cell` ×N |
+| Table cell with a value | `Value cell` → `Value`, optional `Note` (second line), or `Icon/Check` |
 | Label with a tooltip underline | `Tip` → child `Label` (dotted bottom stroke on `Tip`) |
 
-_Catalog log: the Clarasight stats build (2026-10-05) added `Stats`, `Content`, `Lead`, `Intro`, `Headline`, `Badge`, `Stat`, `<Name> [abs]`, `Dots/<Strength>`, the icon vector rule, and the `type` and `visibility` token groups. The Set Space footer build (2026-10-05) added `Wordmark` (live text), `Details`, `Acknowledgement`, `Address` → `Address Line`, `Bottom Row`, the `Pin` icon vector, and the text-style roles `Wordmark` and `Acknowledgement`. The Deck compare-features build (2026-10-07) added `Table`, `Header Row`, `Plan` → `Name`/`Price`, `Feature Group` → `Group Heading`, `Feature Row`, `Label Cell`, `Value Cell` → `Value`/`Note`, `Tip` → `Label`, and the `Circle`/`Check` icon vectors._
+_Catalog log (names converted to Sentence case on 2026-10-15; builds before that date still use Title Case in Figma): the Clarasight stats build (2026-10-05) added `Stats`, `Content`, `Lead`, `Intro`, `Headline`, `Badge`, `Stat`, `<Name> [abs]`, `Dots/<Strength>`, the icon vector rule, and the `type` and `visibility` token groups. The Set Space footer build (2026-10-05) added `Wordmark` (live text), `Details`, `Acknowledgement`, `Address` → `Address line`, `Bottom row`, the `Pin` icon vector, and the text-style roles `Wordmark` and `Acknowledgement`. The Deck compare-features build (2026-10-07) added `Table`, `Header row`, `Plan` → `Name`/`Price`, `Feature group` → `Group heading`, `Feature row`, `Label cell`, `Value cell` → `Value`/`Note`, `Tip` → `Label`, and the `Circle`/`Check` icon vectors._
 
 ### Repeated items
-Repeated siblings share one role name (`Link`, `Link`, `Link`). Their text shows which is which. Add a suffix only when items differ in kind: `Social Link/Instagram`.
+Repeated siblings share one role name (`Link`, `Link`, `Link`). Their text shows which is which. Add a suffix only when items differ in kind: `Social link/Instagram`.
 
 ### Breakpoint instances
 `<Component> / <Breakpoint> <width>` — `Footer / Desktop 1440`, `Footer / Tablet 768`, `Footer / Mobile 375`.
@@ -117,5 +117,6 @@ Run the audit script `scripts/figma_audit.js` (in the skill folder) with `use_fi
 - text without a text style (only with tokens)
 - fills or strokes not bound to a color variable (only with tokens)
 - frames with children but no auto layout (unless marked `[abs]` in the name for intentional absolute layouts)
+- names not in Sentence case (a later word in a segment starts with a capital, e.g. `Link List`); proper names like `Buy Me a Coffee` can be ignored when reported
 
 Then take one screenshot per breakpoint.
