@@ -1,0 +1,21 @@
+## Screen: clarasight-outcomes
+
+- **Platform**: web
+- **Page URL**: https://clarasight.com (Outcomes section)
+- **Source Image**: C:\Users\Vonnue\Downloads\36bab24b-779b-4ad9-b165-37a88640018b.png
+- **Section**: Stats section
+- **Page Types**: Product Page & Landing
+- **UX Patterns**: Product Features
+- **UI Elements**: Badge, Button, Icon
+- **Fonts**: TWK Lausanne 400 for the headline and stat numbers (paid, Weltkern; stand-in: Hanken Grotesk); Inter 400/500 for body, labels, badge and button (free)
+- **Colors**: 0xF7F7FF, 0x070628, 0x2C2C48, 0xA4A4B6, 0x484861
+
+### Content
+- **Description**: This is a dark, enterprise-grade stats section for a travel and expense analytics platform. The page background is a pale lavender-white (#F7F7FF), and the section is one large rounded card (~32px corners) filled with deep navy (#070628) plus a vertical white overlay that goes from transparent at the top to 15% white at the bottom, so the card reads as #070628 at the top and slate indigo (#2C2C48) at the bottom. Headings and numbers are near-white (#F7F7FF); supporting copy is #F7F7FF at 60% (reads as #A4A4B6). Top left sits a small badge, 'Outcomes' (Inter 14px, weight 500, #F7F7FF text on #F7F7FF at 10%, 8px corners, ~10px side padding, ~32px tall). Below it the headline reads 'Proven impact across / enterprise travel programs.' (TWK Lausanne 40px, weight 400, line height 52px). Under it is a paragraph, 'Clarasight's customers reduce reporting overhead, / close spend visibility gaps, and execute program / decisions faster—without adding headcount.' (Inter 18px, regular, line height 30px, 60% near-white). Next is a fully rounded pill button, 'View case studies', with a small right chevron after the label (Inter 16px, weight 500, #F7F7FF text on white at 20% with a 0.75px inner border of #FAFAFA at 25%, ~50px tall, ~220px wide). The bottom of the text column holds three stats in a row: '$5B' over 'T&E spend / of customers', '99%' over 'Faster insights / & workflows', and '25%' over 'Reduction in / travel spend'. Each number is TWK Lausanne 48px/60px, weight 400, #F7F7FF; each label is two lines of Inter 18px/30px at 60% near-white. On the right, a dotted halftone globe made of tiny white dots (~1.5px) at 10–60% opacity shows Asia and Australia; it is cropped by the card's right and bottom edges, and its dots fade toward the left limb, which carries a faint rim. On the live site the globe is a slowly rotating WebGL sphere. There are no shadows. Hover: the button's fill drops to white at 10% and its text to 70% (from the site CSS). Overall, the style is calm, premium and data-led: a deep navy gradient, generous spacing, large light numerals and one quiet global graphic.
+- **Layout**: The layout is a single rounded card centered on the page with ~96px side margins and ~80px above and below (the card spans x 7–93% of a 1440px viewport, ~1248px wide and ~712px tall). It has two columns: a text column on the left (x 6–48% of the card, max 520px wide) and the globe on the right (a 523 × 643px area anchored to the card's bottom-right corner, x 58–100%). The text column has 72px left padding and starts 72px below the card top. From top to bottom: badge, 16px gap, two-line headline, 16px gap, three-line paragraph (max 440px wide), 32px gap, button, ~92px gap, stats row, then 74px to the card's bottom edge. The headline breaks after 'across' and must not reflow to three lines. The three stats are 166px wide with 24px between them (190px pitch); numbers stay on one line and labels on two, with 12px between number and label. Keywords: dark gradient card, stats row, halftone globe, pill button, enterprise proof
+- **Functions**: Users can read Clarasight's outcome claims at a glance: the headline and paragraph frame the value for enterprise travel programs, and the three stats ('$5B', '99%', '25%') give proof in numbers. The 'View case studies' button takes users to customer case studies for detail. The 'Outcomes' badge labels the section so it is easy to find while scrolling. The globe graphic reinforces global reach and has no interaction. Overall, the interface supports credibility with enterprise buyers and case-study engagement.
+
+### Site
+- **Name**: Clarasight
+- **Domain**: clarasight.com
+- **Categories**: Travel, Fintech, Analytics

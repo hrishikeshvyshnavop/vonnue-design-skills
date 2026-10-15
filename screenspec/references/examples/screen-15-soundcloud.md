@@ -1,0 +1,26 @@
+## Screen: 9bcd1777-384c-4e24-a56a-675401243167
+
+- **Platform**: web
+- **Page URL**: https://soundcloud.com/discover
+- **Preview URL**: https://images.refero.design/screenshots/soundcloud.com/desktop/7fbb76d9-73f0-4c2a-a536-df3c2914bc77_preview.jpg
+- **Thumbnail URL**: https://images.refero.design/screenshots/soundcloud.com/desktop/7fbb76d9-73f0-4c2a-a536-df3c2914bc77_thumb.jpg
+- **ReferoURL**: https://refero.design/pages/9bcd1777-384c-4e24-a56a-675401243167
+- **UX Patterns**: User Menu
+- **UI Elements**: Dropdown, Dropdown Menu
+- **Fonts**: Inter, Interstate
+- **Colors**: 0xE0D9D4, 0x39ADCF, 0x2755BC, 0xC8356B, 0x3B352E
+
+### Content
+- **Description**: The screenshots depict a music streaming platform's homepage with a dark theme. The top navigation bar includes icons and text links: a logo on the left, tabs for Home, Feed, Library, a search bar with a magnifying glass icon, and options like Try Go+, Try Artist Pro, For Artists, Upload, and user account controls on the right. Below the navigation, a notification banner with white and purple text on a dark background announces a feature about getting heard by listeners. The main content area is divided into horizontal sections with headings in white text. The first section is "Trending by genre," featuring horizontally scrollable cards with album artwork and genre labels in white text. Genres include Rock, Metal, Punk, Reggae, Country, SoundCloud, and Jazz. To the right of this carousel is an "Artist Tools" sidebar with buttons for Amplify, Replace, and Unlock Artist Tools, styled with icons and purple accent colors. Below is the "Curated to your taste" section with a similar horizontal carousel of album covers and descriptive text. The second screenshot shows an "Artists to watch out for" section with small square cards featuring artist images and genre labels, followed by an "Events near you" section with a wide banner image and location/date dropdown selectors. The sidebar on the right repeats the Artist Tools panel and mobile app download buttons for App Store and Google Play. The color palette is primarily dark (#121212 or similar), with white text (#FFFFFF), purple highlights (#7B3FE4), and orange accent for some links (#FF5500). Typography is modern sans-serif, with headings bold and larger (approx. 20-24px) and body text smaller (12-14px). UI elements include buttons with icons, horizontal carousels with scroll arrows, dropdown selectors, and a collapsible sidebar menu. The layout uses a multi-column grid with the main content on the left and a narrow sidebar on the right. Spacing is generous with consistent margins and padding around cards and sections. The overall style is sleek, modern, and optimized for music discovery and artist promotion on a desktop interface.
+- **Layout**: The layout is a two-column grid with a wide main content area on the left and a narrow sidebar on the right. The top navigation bar spans full width horizontally with left-aligned logo, center-left tabs, center search bar, and right-aligned user options. Below is a notification banner spanning full width. The main content area stacks sections vertically: "Trending by genre" carousel at the top with horizontally scrollable cards, followed by "Curated to your taste" carousel. The next screen shows "Artists to watch out for" as a horizontal list of cards, and below that an "Events near you" wide banner with dropdown filters aligned left. The sidebar on the right contains vertically stacked artist tool buttons and mobile app download badges, with legal and language links below. The dropdown menu on the top right overlays the screen as a vertical list. The carousels have consistent horizontal card spacing and visible scroll arrows. Padding and margins provide clear separation between sections. The overall layout is balanced, with the sidebar visually distinct but integrated, supporting easy scanning and interaction.
+- **Functions**: Users can navigate the music platform via the top navigation bar to access Home, Feed, or Library sections. The search bar allows text input for finding music or artists. Users can view trending music genres through a horizontally scrollable carousel, clicking on genre cards to explore related music. The "Curated to your taste" section offers personalized music recommendations, also in a horizontal carousel. The "Artists to watch out for" section highlights emerging artists with clickable cards. In the "Events near you" section, users can filter events by location and date using dropdown selectors, and view event details by interacting with the banner. The Artist Tools sidebar provides musicians with options to amplify their music, replace tracks, distribute content, and manage their artist account, with subscription options to unlock premium tools. Mobile app download buttons link users to respective app stores. The interface supports user account management via the top-right menu. Overall, the screen facilitates music discovery, artist promotion, event exploration, and account management efficiently with clear visual hierarchy and interactive elements.
+
+### Site
+- **ID**: 137
+- **Name**: SoundCloud
+- **ReferoURL**: https://refero.design/websites/137
+- **Domain**: soundcloud.com
+- **Categories**: Social Networking, Music Streaming
+- **Description**: Hear the world's sounds
+
+---

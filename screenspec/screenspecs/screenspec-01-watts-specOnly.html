@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Watts Footer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Nunito:wght@700;800&family=Rubik:wght@800;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Palette from spec */
+    --orange: #C03800;      /* panel */
+    --offwhite: #F1F1F1;    /* wordmark, secondary type */
+    --black: #000000;       /* page background */
+    --white: #FFFFFF;       /* primary type, field outline, button */
+    --rust: #AF3502;        /* social icon circles */
+    /* Derived (not in spec) */
+    --peach: #F2B596;       /* "muted peach" placeholder */
+    --btn-text: #000000;    /* "dark text" on Subscribe */
+
+    --font-text: "Inter", "Helvetica Neue", Arial, sans-serif;     /* stand-in for PP Neue Montreal */
+    --font-tagline: "Nunito", "Arial Rounded MT Bold", sans-serif;   /* bold rounded sans */
+    --font-mark: "Rubik", "Arial Black", sans-serif;                 /* stand-in for custom wordmark */
+
+    --inset: 8px;
+    --pad-top: 80px;
+    --pad-left: 150px;
+    --pad-right: 100px;
+    --r-right: 24px;
+    --r-left: 320px; /* replaced at runtime with half the panel height */
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; }
+  body {
+    background: var(--black);
+    color: var(--white);
+    font-family: var(--font-text);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .page-spacer { height: 40vh; } /* stand-in for the page content above the footer */
+
+  .footer {
+    margin: var(--inset);
+    background: var(--orange);
+    border-radius: var(--r-left) var(--r-right) var(--r-right) var(--r-left);
+    padding: var(--pad-top) var(--pad-right) 0 var(--pad-left);
+    overflow: hidden;
+    position: relative;
+  }
+
+  .footer__top {
+    display: grid;
+    grid-template-columns: 35% minmax(120px, 0.8fr) minmax(150px, 0.9fr) minmax(0, 370px);
+    column-gap: 40px;
+    align-items: start;
+  }
+
+  .brand__tagline {
+    font-family: var(--font-tagline);
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 1.15;
+    margin: 0 0 16px;
+    max-width: 18em;
+    color: var(--white);
+  }
+  .brand__copy {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--offwhite);
+    margin: 0;
+  }
+  .brand__copy a { color: inherit; text-decoration: none; }
+  .brand__copy a:hover { text-decoration: underline; text-underline-offset: 3px; }
+
+  .col__heading {
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin: 0 0 14px;
+    color: var(--white);
+  }
+
+  .links { list-style: none; margin: 0; padding: 0; }
+  .links li { line-height: 22px; }
+  .links a {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--offwhite);
+    text-decoration: none;
+    transition: color .15s ease, opacity .15s ease;
+  }
+  .links a:hover,
+  .links a:focus-visible {
+    color: var(--white);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+
+  .newsletter { margin: 0 0 28px; }
+  .field {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 370px;
+    height: 40px;
+    border: 1px solid var(--white);
+    border-radius: 999px;
+    padding: 3px 3px 3px 16px;
+    background: transparent;
+    transition: background-color .15s ease;
+  }
+  .field:focus-within { background: rgba(255,255,255,0.06); }
+  .field input {
+    flex: 1;
+    min-width: 0;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    color: var(--white);
+    font: 400 13px/1 var(--font-text);
+  }
+  .field input::placeholder { color: var(--peach); opacity: 1; }
+  .field button {
+    flex: none;
+    height: 100%;
+    border: 0;
+    border-radius: 999px;
+    padding: 0 18px;
+    background: var(--white);
+    color: var(--btn-text);
+    font: 500 13px/1 var(--font-text);
+    cursor: pointer;
+    transition: background-color .15s ease, color .15s ease;
+  }
+  .field button:hover,
+  .field button:focus-visible { background: var(--offwhite); color: var(--orange); }
+
+  .social { display: flex; gap: 8px; list-style: none; margin: 0; padding: 0; }
+  .social a {
+    width: 36px; height: 36px;
+    border-radius: 50%;
+    background: var(--rust);
+    display: grid; place-items: center;
+    color: var(--white);
+    transition: background-color .15s ease, color .15s ease, transform .15s ease;
+  }
+  .social a:hover,
+  .social a:focus-visible { background: var(--white); color: var(--orange); transform: translateY(-2px); }
+  .social svg { width: 16px; height: 16px; display: block; }
+
+  .footer__mark {
+    margin-top: 80px;
+    display: flex;
+    justify-content: flex-end;
+    line-height: 0;
+  }
+  .wordmark {
+    font-family: var(--font-mark);
+    font-weight: 900;
+    font-size: 250px;          /* ~190px visible height for ascender letters */
+    line-height: 0.78;
+    letter-spacing: -0.04em;
+    color: var(--offwhite);
+    margin: 0;
+    padding-bottom: 6px;       /* nearly touches the panel's bottom edge */
+    white-space: nowrap;
+    user-select: none;
+  }
+
+  .sr-only {
+    position: absolute; width: 1px; height: 1px; overflow: hidden;
+    clip: rect(0 0 0 0); white-space: nowrap;
+  }
+
+  /* Medium screens */
+  @media (max-width: 1100px) {
+    :root { --pad-left: 110px; --pad-right: 56px; }
+    .footer__top { grid-template-columns: 1fr 1fr; row-gap: 40px; }
+    .footer { border-radius: 140px var(--r-right) var(--r-right) 140px; }
+    .brand { grid-column: 1 / -1; }
+    .wordmark { font-size: 22vw; }
+  }
+
+  /* Phone */
+  @media (max-width: 640px) {
+    :root { --inset: 6px; --pad-top: 48px; --pad-left: 24px; --pad-right: 24px; --r-right: 24px; }
+    .footer { border-radius: 48px var(--r-right) var(--r-right) 48px; }
+    .footer__top { grid-template-columns: 1fr 1fr; column-gap: 20px; row-gap: 32px; }
+    .newsletter-col { grid-column: 1 / -1; }
+    .brand__tagline { font-size: 20px; }
+    .footer__mark { margin-top: 48px; }
+    .wordmark { font-size: 30vw; }
+  }
+</style>
+</head>
+<body>
+  <div class="page-spacer" aria-hidden="true"></div>
+
+  <footer class="footer" id="footer">
+    <div class="footer__top">
+      <div class="brand">
+        <p class="brand__tagline">Fueling happier, healthier dogs. One Watt at a time!</p>
+        <p class="brand__copy">&copy; 2026 Watts Pet / Site &amp; Brand by <a href="#">View Source</a></p>
+      </div>
+
+      <nav aria-labelledby="nav-h">
+        <h2 class="col__heading" id="nav-h">Navigation</h2>
+        <ul class="links">
+          <li><a href="#">Shop</a></li>
+          <li><a href="#">FAQ</a></li>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Learn</a></li>
+          <li><a href="#">Find Watts Near You</a></li>
+        </ul>
+      </nav>
+
+      <nav aria-labelledby="support-h">
+        <h2 class="col__heading" id="support-h">Support</h2>
+        <ul class="links">
+          <li><a href="#">Contact Us</a></li>
+          <li><a href="#">Shipping &amp; Returns</a></li>
+          <li><a href="#">Customer Support</a></li>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Affiliates</a></li>
+        </ul>
+      </nav>
+
+      <div class="newsletter-col">
+        <form class="newsletter" onsubmit="event.preventDefault()">
+          <h2 class="col__heading"><label for="email">Get the latest from Watts.</label></h2>
+          <div class="field">
+            <input id="email" type="email" placeholder="Email Address" autocomplete="email">
+            <button type="submit">Subscribe</button>
+          </div>
+        </form>
+
+        <h2 class="col__heading">Follow us</h2>
+        <ul class="social">
+          <li><a href="#" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+          </a></li>
+          <li><a href="#" aria-label="TikTok">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.4v13.3a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.1a6.4 6.4 0 1 0 5.4 6.3V8.6a8 8 0 0 0 4.4 1.4V6.6a4.5 4.5 0 0 1-4.4-4.6z"/></svg>
+          </a></li>
+          <li><a href="#" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8.5V6.6c0-.9.6-1.1 1-1.1h2.6V1.6L14 1.6c-4 0-4.9 3-4.9 4.9v2H6.4v4h2.7V22.4H14V12.5h3.3l.4-4H14z"/></svg>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer__mark">
+      <p class="wordmark" aria-hidden="true">watts</p>
+      <span class="sr-only">Watts</span>
+    </div>
+  </footer>
+
+  <script>
+    // Keep the left end a true semicircle: left radius = half the panel height (desktop/tablet only).
+    (function () {
+      var el = document.getElementById('footer');
+      if (!el || !('ResizeObserver' in window)) return;
+      new ResizeObserver(function () {
+        el.style.setProperty('--r-left', (el.offsetHeight / 2) + 'px');
+      }).observe(el);
+    })();
+  </script>
+</body>
+</html>
